@@ -1,0 +1,277 @@
+/* =========================
+   PLANES (Mi Red Huancayo)
+   Fondo blanco SIEMPRE
+   Archivo: resources/css/planes.css
+========================= */
+
+.plans-page {
+    background: #fff;
+}
+
+/* Si tu header-spacer ya existe global, NO lo dupliques.
+   Si no existe, este valor evita choque con header fixed. */
+.header-spacer {
+    height: 128px; /* ajustado para topbar + header alto */
+}
+@media (min-width: 768px) {
+    .header-spacer {
+        height: 136px;
+    }
+}
+
+.plans {
+    padding: 42px 0 64px;
+    background: #fff;
+    color: #111827;
+}
+
+.plans__container {
+    position: relative;
+}
+
+/* Header */
+.plans__head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: end;
+    margin-bottom: 22px;
+}
+
+@media (min-width: 900px) {
+    .plans__head {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 22px;
+    }
+}
+
+.plans__kicker {
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(17, 24, 39, 0.65);
+}
+
+.plans__title {
+    margin: 0 0 10px;
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 950;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: #0f172a;
+}
+
+.plans__subtitle {
+    margin: 0;
+    max-width: 68ch;
+    color: rgba(17, 24, 39, 0.72);
+    line-height: 1.6;
+}
+
+/* Badge */
+.plans__badge {
+    border-radius: 18px;
+    padding: 14px 14px;
+    background: #fff;
+    border: 1px solid rgba(17, 24, 39, 0.1);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.plans__badgeTop,
+.plans__badgeBot {
+    display: block;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(17, 24, 39, 0.6);
+}
+
+.plans__badgeBig {
+    display: block;
+    margin: 8px 0;
+    font-size: 34px;
+    font-weight: 1000;
+    letter-spacing: 0.06em;
+    color: #111827;
+}
+
+/* Grid */
+.plans__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+/* Card */
+.plan-card {
+    position: relative;
+    border-radius: 18px;
+    padding: 18px;
+    background: #fff;
+    border: 1px solid rgba(17, 24, 39, 0.1);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(17, 24, 39, 0.16);
+    box-shadow: 0 26px 80px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured */
+.plan-card.is-featured {
+    border-color: rgba(230, 0, 18, 0.35);
+    box-shadow:
+        0 22px 80px rgba(230, 0, 18, 0.1),
+        0 18px 60px rgba(0, 0, 0, 0.08);
+}
+
+.plan-card.is-featured::after {
+    content: "Top";
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(230, 0, 18, 0.1);
+    border: 1px solid rgba(230, 0, 18, 0.28);
+    color: #111827;
+    font-weight: 950;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Card top */
+.plan-card__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.plan-card__tag {
+    margin: 0 0 6px;
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(17, 24, 39, 0.6);
+}
+
+.plan-card__name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 950;
+    color: #111827;
+}
+
+/* Speed */
+.plan-card__speed {
+    text-align: right;
+    min-width: 92px;
+}
+
+.plan-card__speedNum {
+    display: block;
+    font-size: 40px;
+    font-weight: 1000;
+    line-height: 1;
+    color: #111827;
+}
+
+.plan-card__speedUnit {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(17, 24, 39, 0.6);
+}
+
+/* Desc */
+.plan-card__desc {
+    margin: 12px 0 14px;
+    color: rgba(17, 24, 39, 0.74);
+    line-height: 1.55;
+}
+
+/* Price */
+.plan-card__priceRow {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 6px 0 12px;
+}
+
+.plan-card__price {
+    font-size: 30px;
+    font-weight: 1000;
+    color: var(--red);
+}
+
+.plan-card__per {
+    font-size: 13px;
+    font-weight: 900;
+    color: rgba(17, 24, 39, 0.55);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Features */
+.plan-card__features {
+    margin: 0 0 16px;
+    padding-left: 18px;
+    color: rgba(17, 24, 39, 0.68);
+    display: grid;
+    gap: 8px;
+}
+
+.plan-card__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.plan-card__btn {
+    min-width: 140px;
+}
+
+/* Link */
+.plan-card__link {
+    color: rgba(17, 24, 39, 0.72);
+    text-decoration: none;
+    font-weight: 950;
+    letter-spacing: 0.02em;
+    transition:
+        color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.plan-card__link:hover {
+    color: #111827;
+    transform: translateX(2px);
+}
+
+/* Footer */
+.plans__foot {
+    margin-top: 16px;
+}
+
+.plans__note {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(17, 24, 39, 0.58);
+}

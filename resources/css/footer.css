@@ -1,0 +1,403 @@
+/* =========================
+   FOOTER PRO – Mi Red Huancayo
+   Tipo “modelo” (limpio, centrado, ligero)
+   Paleta: rojo / blanco / negro
+   Archivo: resources/css/footer.css
+========================= */
+
+.mr-footer {
+    background: #fff;
+    color: #0b0b0f;
+    border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+/* Ajuste de container SOLO para el footer (por si tu layout cambia) */
+.mr-footer .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.mr-footer__container {
+    padding: 56px 0 22px;
+}
+
+/* =========================
+   GRID
+========================= */
+.mr-footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 34px;
+    align-items: start;
+}
+
+@media (min-width: 980px) {
+    .mr-footer__grid {
+        grid-template-columns: 1.15fr 0.95fr 0.95fr 0.95fr;
+        gap: 56px;
+    }
+}
+
+/* =========================
+   BRAND
+========================= */
+.mr-footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* logo row */
+.mr-footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mr-footer__logoImg {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+}
+
+.mr-footer__logoText {
+    font-weight: 850;
+    font-size: 18px;
+    letter-spacing: 0.1px;
+    line-height: 1.1;
+}
+
+.mr-footer__logoText span {
+    color: rgba(11, 11, 15, 0.55);
+    font-weight: 750;
+}
+
+/* descripción ligera tipo modelo */
+.mr-footer__desc {
+    margin: 4px 0 2px;
+    max-width: 54ch;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: rgba(11, 11, 15, 0.62);
+    font-weight: 400;
+}
+
+.mr-footer__desc strong {
+    font-weight: 700;
+    color: rgba(11, 11, 15, 0.78);
+}
+
+/* CTA (mantiene tus botones globales, pero los “normaliza” aquí) */
+.mr-footer__cta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+.mr-footer__cta .btn {
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 14px;
+    font-weight: 700; /* 👈 baja el peso para que no se vea “negrito” */
+}
+
+/* badges */
+.mr-footer__badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+.mr-badge {
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 12px;
+    border-radius: 999px;
+
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+
+    background: rgba(230, 0, 18, 0.06);
+    border: 1px solid rgba(230, 0, 18, 0.14);
+    color: rgba(11, 11, 15, 0.72);
+}
+
+/* =========================
+   COLUMNS
+========================= */
+.mr-footer__col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* títulos tipo modelo */
+.mr-footer__title {
+    margin: 2px 0 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(11, 11, 15, 0.55);
+}
+
+/* links ligeros (sin bold) */
+.mr-footer__link {
+    display: block;
+    padding: 7px 0;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(11, 11, 15, 0.7);
+
+    transition:
+        color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.mr-footer__link:hover {
+    color: var(--red);
+    transform: translateX(2px);
+}
+
+/* =========================
+   META (ubicación / whatsapp)
+========================= */
+.mr-footer__meta {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(17, 24, 39, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mr-metaRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14.5px;
+    font-weight: 400;
+    color: rgba(11, 11, 15, 0.66);
+}
+
+.mr-metaRow strong {
+    font-weight: 700;
+    color: rgba(11, 11, 15, 0.78);
+}
+
+.mr-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: var(--red);
+    box-shadow: 0 10px 20px rgba(230, 0, 18, 0.18);
+    flex: 0 0 auto;
+}
+
+/* =========================
+   SOCIAL (minimal)
+========================= */
+.mr-footer__social {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.mr-social {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 650;
+    color: rgba(11, 11, 15, 0.7);
+
+    background: #fff;
+    border: 1px solid rgba(17, 24, 39, 0.1);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.mr-social:hover {
+    transform: translateY(-2px);
+    border-color: rgba(230, 0, 18, 0.22);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   BOTTOM (separador arriba como modelo)
+========================= */
+.mr-footer__bottom {
+    margin-top: 44px; /* 👈 separador “más arriba” */
+    padding-top: 22px;
+    border-top: 1px solid rgba(17, 24, 39, 0.08);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(11, 11, 15, 0.55);
+}
+
+.mr-footer__dev strong {
+    font-weight: 700;
+    color: rgba(11, 11, 15, 0.75);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 720px) {
+    .mr-footer .container {
+        padding: 0 16px;
+    }
+
+    .mr-footer__container {
+        padding: 44px 0 18px;
+    }
+
+    .mr-footer__bottom {
+        margin-top: 26px;
+        padding-top: 16px;
+    }
+}
+
+/* =========================
+   FIX: compactar columna Brand (para que no deje “aire”)
+   Pegar al FINAL de footer.css
+========================= */
+
+/* reduce alto visual del bloque marca */
+.mr-footer__brand {
+    gap: 10px;
+}
+
+.mr-footer__desc {
+    margin: 6px 0 6px;
+    line-height: 1.6;
+    max-width: 48ch;
+}
+
+/* CTA más compacto (botones no tan altos) */
+.mr-footer__cta {
+    margin-top: 4px;
+}
+.mr-footer__cta .btn {
+    height: 40px; /* antes 44 */
+    padding: 0 14px; /* menos ancho */
+    border-radius: 12px;
+    font-weight: 650;
+}
+
+/* badges más compactos y que no “rompan” 3 líneas */
+.mr-footer__badges {
+    gap: 8px;
+    margin-top: 6px;
+    max-width: 420px; /* controla wrapping */
+}
+
+.mr-badge {
+    height: 30px;
+    padding: 0 10px; /* antes 12+ */
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap; /* evita que “Soporte local” parta */
+}
+
+/* en pantallas medianas/pequeñas, permite wrap normal */
+@media (max-width: 900px) {
+    .mr-footer__badges {
+        max-width: none;
+    }
+    .mr-badge {
+        white-space: normal;
+    }
+}
+/* =========================
+   FOOTER – FIX “modelo Tribio”
+   (pegar al FINAL del archivo footer.css)
+========================= */
+
+footer.mr-footer .mr-footer__container {
+    padding: 34px 0 14px !important; /* menos alto general */
+}
+
+/* Desktop: centra visualmente las columnas (como el modelo) */
+@media (min-width: 980px) {
+    footer.mr-footer .mr-footer__grid {
+        align-items: center !important; /* 👈 clave del “aire” */
+    }
+}
+
+/* Compactar bloque brand (izquierda) */
+footer.mr-footer .mr-footer__desc {
+    margin: 8px 0 10px !important;
+    line-height: 1.6 !important;
+    max-width: 46ch;
+}
+
+/* Botones del footer más “modelo” */
+footer.mr-footer .mr-footer__cta .btn {
+    height: 40px !important;
+    padding: 0 14px !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+}
+
+/* Chips/badges: más finos y menos altos */
+footer.mr-footer .mr-footer__badges {
+    margin-top: 8px !important;
+    gap: 8px !important;
+    max-width: 320px; /* controla que no se vaya a 3 filas */
+}
+
+footer.mr-footer .mr-badge {
+    height: 30px !important;
+    padding: 0 10px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap;
+}
+
+/* Títulos y links más “ligeros” */
+footer.mr-footer .mr-footer__title {
+    margin: 0 0 10px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: rgba(11, 11, 15, 0.68) !important;
+}
+
+footer.mr-footer .mr-footer__link {
+    padding: 6px 0 !important;
+    font-weight: 500 !important;
+    color: rgba(11, 11, 15, 0.62) !important;
+}
+
+/* Bottom bar: separador más arriba */
+footer.mr-footer .mr-footer__bottom {
+    margin-top: 14px !important;
+    padding-top: 12px !important;
+    font-weight: 500 !important;
+}

@@ -1,0 +1,1032 @@
+/* =========================================
+   HOME — PLANES (OPTIMIZADO)
+   ========================================= */
+
+.home-plans {
+    margin: 0%;
+    padding: 3px 0;
+}
+
+/* ---------- PROMO / HEADLINE ---------- */
+.plans-promo {
+    margin: 0; /* 🔥 antes 28px → ahora MÁS PEGADO */
+    padding: 32px 28px;
+    border-radius: 28px;
+
+    background:
+        radial-gradient(
+            800px 320px at 50% 0%,
+            rgba(237, 198, 201, 0.12),
+            transparent 60%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.95),
+            rgba(255, 255, 255, 0.85)
+        );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.home-plans .promo-badge {
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--red), #0b0b0f);
+    margin-bottom: 10px;
+}
+
+.home-plans .promo-title {
+    margin: 0;
+    font-weight: 1000;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #111827;
+}
+
+@media (min-width: 768px) {
+    .home-plans .promo-title {
+        font-size: 40px;
+    }
+}
+
+.home-plans .promo-highlight {
+    color: var(--red);
+}
+
+.home-plans .promo-text {
+    margin-top: 10px;
+    max-width: 70ch;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+/* ---------- TABS (ESPACIO AJUSTADO) ---------- */
+.home-plans .plan-tabs {
+    margin-top: 5px; /* 🔥 antes 40px */
+    display: grid;
+    gap: 14px;
+
+    justify-content: center;
+    grid-template-columns: repeat(3, max-content);
+    justify-items: center;
+}
+
+@media (max-width: 767px) {
+    .home-plans .plan-tabs {
+        grid-template-columns: 1fr;
+    }
+
+    .home-plans .plan-tab {
+        width: min(520px, 100%);
+        justify-self: center;
+    }
+}
+
+.home-plans .plan-tab {
+    min-width: 240px;
+    padding: 16px 20px;
+    border-radius: 10px;
+
+    font-weight: 1000;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(230, 0, 18, 0.25);
+    color: #111827;
+
+    cursor: pointer;
+    transition:
+        transform 0.16s ease,
+        background 0.16s ease,
+        box-shadow 0.16s ease,
+        border-color 0.16s ease;
+}
+
+.home-plans .plan-tab:hover {
+    background: rgba(230, 0, 18, 0.06);
+    border-color: rgba(230, 0, 18, 0.32);
+    transform: translateY(-1px);
+}
+
+.home-plans .plan-tab.is-active {
+    background: linear-gradient(135deg, var(--red), #0b0b0f);
+    border-color: transparent;
+    color: var(--white);
+    box-shadow: 0 18px 40px rgba(230, 0, 18, 0.22);
+}
+
+/* ---------- Grid Cards (scoped) ---------- */
+.home-plans .cards {
+    margin-top: 40px;
+    display: grid;
+    gap: 18px;
+}
+
+.home-plans .cards.cards-3 {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+    .home-plans .cards.cards-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ---------- Plan card (glass) ---------- */
+.home-plans .card-clean.plan {
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(229, 231, 235, 0.95);
+    border-radius: 22px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 440px;
+}
+
+.home-plans .card-clean.plan::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background: radial-gradient(
+        700px 260px at 18% 0%,
+        rgba(230, 0, 18, 0.12),
+        transparent 62%
+    );
+    pointer-events: none;
+}
+
+.home-plans .card-clean.plan:hover {
+    box-shadow: 0 26px 80px rgba(0, 0, 0, 0.1);
+    border-color: rgba(230, 0, 18, 0.18);
+}
+
+/* Badge */
+.home-plans .plan-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+
+    padding: 7px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 1000;
+
+    background: rgba(230, 0, 18, 0.1);
+    border: 1px solid rgba(230, 0, 18, 0.22);
+    color: #111827;
+}
+
+/* Top row */
+.home-plans .plan-top {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    padding-top: 34px;
+}
+
+.home-plans .plan-name {
+    font-weight: 1000;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    color: #111827;
+}
+
+.home-plans .plan-desc {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 28ch;
+}
+
+/* Precio */
+.home-plans .plan-pricebox {
+    text-align: right;
+    min-width: 120px;
+}
+
+.home-plans .plan-price {
+    font-weight: 1000;
+    font-size: 22px;
+    color: #111827;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.home-plans .plan-unit {
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 1000;
+    color: var(--muted);
+    opacity: 0.85;
+    white-space: nowrap;
+}
+
+/* Velocidad */
+.home-plans .plan-speed {
+    margin-top: 16px;
+    font-weight: 1000;
+    font-size: 44px;
+    letter-spacing: -0.03em;
+    color: var(--red);
+    line-height: 1;
+}
+
+/* Mbps usa la misma .plan-unit */
+.home-plans .plan-speed + .plan-unit {
+    margin-top: 6px;
+    opacity: 0.8;
+}
+
+/* Features */
+.home-plans .plan-list {
+    position: relative;
+    z-index: 1;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+.home-plans .plan-list li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13px;
+    color: #111827;
+}
+
+.home-plans .plan-list .check {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 1000;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--red), #111);
+    box-shadow: 0 10px 22px rgba(230, 0, 18, 0.12);
+    flex: 0 0 auto;
+    margin-top: 1px;
+}
+
+/* CTA abajo siempre */
+.home-plans .plan-cta {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    padding-top: 16px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 900px) {
+    .home-plans .plan-cta .btn {
+        flex: 1 1 auto;
+    }
+}
+
+/* =========================================
+   HOME — BENEFICIOS (cards pequeñas, verticales)
+   ========================================= */
+
+.home-benefits {
+    padding: 48px 0 32px;
+}
+
+/* Título */
+.home-benefits .benefits-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    color: #111827;
+    margin-bottom: 26px;
+}
+
+.home-benefits .benefits-title span {
+    color: var(--red);
+}
+
+/* =========================
+   Grid centrado
+   ========================= */
+
+.benefits-grid {
+    display: grid;
+
+    /* 🔥 CLAVE ABSOLUTA */
+    width: fit-content;
+    margin-inline: auto;
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+@media (min-width: 900px) {
+    .benefits-grid {
+        grid-template-columns: repeat(4, 180px); /* ajusta aquí */
+        gap: 18px;
+    }
+}
+
+/* =========================
+   Card beneficio (vertical)
+   ========================= */
+
+.benefit-card {
+    background: #ffffff;
+    border: 1px solid rgba(229, 231, 235, 0.9);
+    border-radius: 16px;
+
+    padding: 24px 16px;
+    min-height: 200px; /* 🔥 CLAVE: más alto que ancho */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   Icono
+   ========================= */
+
+.benefit-icon {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   Título
+   ========================= */
+
+.benefit-card h4 {
+    font-size: 14px;
+    font-weight: 900;
+    margin: 0 0 8px;
+    color: #111827;
+}
+
+/* =========================
+   Texto
+   ========================= */
+
+.benefit-card p {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0;
+}
+/* Línea separadora debajo del título */
+.benefit-card h4 {
+    position: relative;
+    padding-bottom: 10px; /* espacio para la línea */
+    margin-bottom: 10px; /* separa del texto */
+}
+
+/* la línea */
+.benefit-card h4::after {
+    content: "";
+    display: block;
+    width: 46px; /* largo de la línea */
+    height: 3px; /* grosor */
+    border-radius: 999px; /* puntas redondas */
+
+    background: rgba(230, 0, 18, 0.9); /* tu rojo */
+    margin: 10px auto 0; /* centrada y con aire */
+    opacity: 0.9;
+}
+
+/* =========================================
+   Carousel de planes (OPTIMIZADO)
+   ========================================= */
+/* ===== Plans Carousel ===== */
+.plans-carousel {
+    position: relative;
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    align-items: center;
+    gap: 14px;
+}
+
+.pc-viewport {
+    overflow-x: hidden; /* oculta lo que sale a los lados */
+    overflow-y: visible; /* deja crecer arriba/abajo (no recorta la card grande) */
+    padding: 28px 0; /* extra para que el scale respire */
+}
+
+.pc-track {
+    display: flex;
+    gap: 18px;
+    will-change: transform;
+    transition: transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    padding: 6px 2px 14px;
+}
+
+/* cada card ocupa ~ 1/3 del viewport (ajustable) */
+.pc-card {
+    flex: 0 0 calc((100% - (18px * 2)) / 3);
+    transition:
+        transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        opacity 420ms ease;
+    transform-origin: center;
+}
+
+/* Centro “grande” */
+.pc-card.is-center {
+    transform: scale(1.06);
+    z-index: 3;
+}
+
+/* Laterales un toque más “soft” */
+.pc-card.is-side {
+    transform: scale(0.96);
+    opacity: 0.92;
+    z-index: 2;
+}
+
+.pc-arrow {
+    height: 44px;
+    width: 44px;
+    border-radius: 14px;
+    border: 1px solid rgba(229, 231, 235, 0.95);
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 900;
+    color: #111827;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.pc-arrow:hover {
+    background: rgba(230, 0, 18, 0.06);
+    border-color: rgba(230, 0, 18, 0.22);
+}
+
+.pc-arrow:active {
+    transform: translateY(1px);
+}
+
+/* Mobile: 1 card visible (centro) */
+@media (max-width: 860px) {
+    .plans-carousel {
+        grid-template-columns: 44px 1fr 44px;
+        gap: 10px;
+    }
+
+    .pc-card {
+        flex-basis: 100%;
+    }
+
+    .pc-card.is-side {
+        opacity: 1;
+        transform: scale(1);
+    }
+    .pc-card.is-center {
+        transform: scale(1);
+    }
+}
+
+/* ===== Ajuste de separación (más alto) ===== */
+.home-plans .plans-carousel {
+    margin-top: 46px; /* antes 18px, súbelo a gusto: 28-46 */
+}
+
+/* ===== Cards: laterales más pequeñas y centro más grande ===== */
+.pc-card {
+    transition:
+        transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        opacity 520ms ease,
+        filter 520ms ease;
+    transform-origin: center;
+}
+
+/* Centro “grande” */
+.pc-card.is-center {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: none;
+    z-index: 4;
+}
+
+/* Laterales “mucho más pequeñas” */
+.pc-card.is-side {
+    transform: scale(0.82);
+    opacity: 0.72;
+    filter: saturate(0.92);
+    z-index: 2;
+}
+
+/* Opcional: si quieres que las laterales se vean aún más “al fondo” */
+.pc-card.is-far {
+    transform: scale(0.74);
+    opacity: 0.55;
+    filter: saturate(0.85);
+    z-index: 1;
+}
+
+/* Mobile: mejor que se vea 1 tarjeta siempre */
+@media (max-width: 860px) {
+    .home-plans .plans-carousel {
+        margin-top: 22px;
+    }
+
+    .pc-card,
+    .pc-card.is-side,
+    .pc-card.is-center,
+    .pc-card.is-far {
+        transform: scale(1);
+        opacity: 1;
+        filter: none;
+    }
+}
+
+/* =========================
+   PANEL 2: Fibra + TV (WINTV/DGO)
+   ========================= */
+.tv-bundles {
+    margin-top: 22px;
+    padding: 10px 0 26px;
+}
+
+.tv-bundles-head {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tvb-title {
+    margin: 0;
+    font-weight: 1000;
+    letter-spacing: -0.02em;
+    color: #111827;
+    font-size: 26px;
+}
+
+.tvb1-title,
+.tvb2-title {
+    margin: 0;
+    font-weight: 1000;
+    letter-spacing: -0.02em;
+    font-size: 26px; /* mismo tamaño */
+    color: var(--red); /* rojo */
+}
+
+/* Switch WINTV/DGO (barra larga con botones encima) */
+.tvb-switch {
+    position: relative;
+    max-width: 640px;
+    margin: 18px auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 10px 0 8px;
+}
+
+.tvb-switch-rail {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 6px;
+    transform: translateY(-50%);
+    background: linear-gradient(
+        90deg,
+        #ff0000 0%,
+        #ff0000 38%,
+        #0b0b10 62%,
+        #0b0b10 100%
+    );
+    border-radius: 999px;
+    opacity: 0.95;
+}
+
+.tvb-switch-btn {
+    position: relative;
+    z-index: 2;
+    min-width: 210px;
+    height: 44px;
+    border-radius: 12px;
+    border: 0;
+    font-weight: 1000;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    background: #fff;
+    color: #111827;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
+}
+
+.tvb-switch-btn.is-active[data-provider="wintv"] {
+    background: #ff0000;
+    color: #0b0b10;
+}
+
+.tvb-switch-btn.is-active[data-provider="dgo"] {
+    background: #0b0b10;
+    color: #fff;
+}
+
+/* Packs (4 botones) */
+.tvb-packs {
+    max-width: 980px;
+    margin: 16px auto 0;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+    .tvb-packs {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.tvb-pack {
+    position: relative;
+    height: 44px;
+    border-radius: 12px;
+    border: 2px solid rgba(230, 0, 18, 0.35);
+    background: #fff;
+    font-weight: 1000;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+}
+
+.tvb-pack.is-active {
+    background: linear-gradient(135deg, var(--red), #0b0b10);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 18px 44px rgba(230, 0, 18, 0.18);
+}
+
+.tvb-pack-notch {
+    display: none;
+}
+
+.tvb-pack.is-active .tvb-pack-notch {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 14px;
+    height: 14px;
+    transform: translateX(-50%) rotate(45deg);
+    background: linear-gradient(135deg, var(--red), #0b0b10);
+    border-radius: 4px;
+}
+
+/* Cards (2 centradas) */
+.tvb-cards {
+    margin-top: 22px;
+    display: grid;
+    gap: 18px;
+    justify-content: center; /* centra el conjunto */
+}
+
+@media (min-width: 900px) {
+    .tvb-cards {
+        grid-template-columns: repeat(
+            auto-fit,
+            280px
+        ); /* 🔥 clave: no “reserva” columnas vacías */
+        gap: 22px;
+        justify-content: center; /* centra el track de columnas */
+        width: 100%; /* ocupa todo el ancho del contenedor */
+    }
+}
+
+.tvb-card {
+    background: #fff;
+    border-radius: 22px;
+    border: 1px solid rgba(230, 0, 18, 0.35);
+    box-shadow: 0 24px 90px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tvb-card-inner {
+    padding: 18px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 520px;
+}
+
+.tvb-card-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.tvb-pill {
+    width: 100%;
+    border-radius: 14px;
+    padding: 12px 12px;
+    background: rgba(230, 0, 18, 0.06);
+    text-align: center;
+    font-weight: 900;
+    color: #111827;
+}
+
+.tvb-pill strong {
+    font-weight: 1000;
+}
+
+.tvb-mbps {
+    display: inline-block;
+    margin-top: 4px;
+    font-weight: 1000;
+    font-size: 18px;
+}
+
+.tvb-plus {
+    font-weight: 1000;
+    font-size: 18px;
+    color: var(--red);
+}
+
+.tvb-pill-tv {
+    background: rgba(17, 24, 39, 0.04);
+}
+
+.tvb-tvbrand {
+    font-weight: 1000;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    color: #ff0000; /* vibe WINTV */
+}
+
+/* precio */
+.tvb-price {
+    margin-top: 14px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tvb-currency {
+    font-weight: 1000;
+    font-size: 26px;
+    color: #111827;
+}
+
+.tvb-per {
+    font-weight: 900;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.tvb-note {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.tvb-extras {
+    margin-top: 10px;
+    text-align: center;
+    min-height: 44px;
+}
+
+.tvb-extra {
+    font-size: 12px;
+    font-weight: 1000;
+    color: #111827;
+}
+
+/* CTA al fondo */
+.tvb-cta {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 14px;
+}
+
+.tvb-btn {
+    height: 44px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 1000;
+    background: #890707;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 18px 50px rgba(255, 0, 0, 0.763);
+}
+
+.tvb-details {
+    height: 34px;
+    background: transparent;
+    border: 0;
+    font-weight: 900;
+    color: #111827;
+    cursor: pointer;
+}
+/* Párrafo descriptivo (mejorado) */
+.tvb-sub {
+    margin: 2px auto 0;
+    max-width: 76ch;
+
+    padding: 12px 16px;
+    font-size: 13.5px;
+    line-height: 1.75;
+}
+
+/* Detalles internos para que se vea más bonito */
+.tvb-sub strong {
+    color: var(--red);
+    font-weight: 1000;
+}
+
+/* Línea/acentito a la izquierda (sin chocar) */
+.tvb-sub::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--red);
+    margin-right: 10px;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   PANEL 3: GAMER (Mi Red Huancayo)
+   Colores: Rojo / Negro / Blanco
+   ========================= */
+
+.gamer-win {
+    margin-top: 22px;
+    padding: 10px 0 28px;
+}
+
+/* Layout */
+.gwin-wrap {
+    display: grid;
+    gap: 18px;
+    align-items: stretch;
+}
+
+@media (min-width: 900px) {
+    .gwin-wrap {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 22px;
+    }
+}
+
+/* =========================
+   LEFT – TEXTO (ROJO)
+   ========================= */
+.gwin-left {
+    position: relative;
+    border-radius: 18px;
+    padding: 28px 24px;
+    background: linear-gradient(135deg, #c40000 0%, #8b0000 45%, #0b0b10 100%);
+    color: #ffffff;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+/* brillo gamer */
+.gwin-left::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: radial-gradient(
+        520px 260px at 30% 0%,
+        rgba(255, 255, 255, 0.22),
+        transparent 60%
+    );
+    pointer-events: none;
+}
+
+/* Tag superior */
+.gwin-kicker {
+    margin: 0 0 10px;
+    font-weight: 1000;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.95;
+}
+
+/* Título */
+.gwin-title {
+    margin: 0;
+    font-weight: 1000;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+    .gwin-title {
+        font-size: 38px;
+    }
+}
+
+/* Highlight blanco tipo gamer */
+.gwin-title span {
+    background: #ffffff;
+    color: #0b0b10;
+    padding: 4px 12px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Subtexto */
+.gwin-sub {
+    margin: 14px 0 0;
+    max-width: 60ch;
+    font-size: 14px;
+    line-height: 1.75;
+    opacity: 0.95;
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+.gwin-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Botón principal */
+.gwin-btn {
+    height: 46px;
+    padding: 0 22px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 1000;
+    text-decoration: none;
+    background: #0b0b10;
+    color: #ffffff;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+    transition:
+        transform 0.16s ease,
+        box-shadow 0.16s ease;
+}
+
+.gwin-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 26px 64px rgba(0, 0, 0, 0.6);
+}
+
+/* Botón secundario */
+.gwin-btn-ghost {
+    background: #ffffff;
+    color: #0b0b10;
+}
+
+

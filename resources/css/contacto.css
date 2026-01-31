@@ -1,0 +1,404 @@
+/* =========================
+   CONTACTO – Layout tipo referencia
+   Paleta: rojo / blanco / negro
+   Archivo: resources/css/contacto.css
+========================= */
+
+.mr-contact {
+    background: #fff;
+    color: #0b0b0f;
+    padding: 34px 0 56px;
+}
+
+/* grid */
+.mr-contact__grid {
+    display: grid;
+    gap: 22px;
+    align-items: start;
+}
+
+@media (min-width: 980px) {
+    .mr-contact__grid {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 28px;
+    }
+}
+
+/* =========================
+   HEAD LEFT
+========================= */
+.mr-contact__head {
+    margin-bottom: 14px;
+    max-width: 64ch;
+}
+
+.mr-contact__pill {
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 999px;
+
+    background: rgba(230, 0, 18, 0.08);
+    border: 1px solid rgba(230, 0, 18, 0.16);
+    color: rgba(11, 11, 15, 0.82);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.mr-contact__title {
+    margin: 10px 0 6px;
+    font-size: 36px;
+    font-weight: 950;
+    letter-spacing: -0.02em;
+}
+
+.mr-contact__subtitle {
+    margin: 0;
+    color: rgba(11, 11, 15, 0.68);
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.mr-contact__subtitle strong {
+    color: rgba(11, 11, 15, 0.85);
+    font-weight: 800;
+}
+
+/* =========================
+   CARD
+========================= */
+.mr-card {
+    background: #fff;
+    border: 1px solid rgba(17, 24, 39, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.06);
+}
+
+.mr-contact__card {
+    padding: 18px;
+}
+
+/* portal row */
+.mr-contact__portal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 12px 12px;
+    border-radius: 16px;
+    background: rgba(17, 24, 39, 0.03);
+    border: 1px solid rgba(17, 24, 39, 0.08);
+
+    margin-bottom: 14px;
+}
+
+.mr-contact__portalText {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(11, 11, 15, 0.72);
+}
+
+.mr-contact__portalBtn {
+    height: 38px;
+}
+
+/* =========================
+   FORM
+========================= */
+.mr-form {
+    display: grid;
+    gap: 12px;
+}
+
+.mr-row {
+    display: grid;
+    gap: 12px;
+}
+
+@media (min-width: 720px) {
+    .mr-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.mr-field {
+    display: grid;
+    gap: 8px;
+}
+
+.mr-label {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(11, 11, 15, 0.72);
+}
+
+.mr-input,
+.mr-textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid rgba(17, 24, 39, 0.16);
+    border-radius: 14px;
+    padding: 12px 14px;
+
+    font-size: 14px;
+    color: rgba(11, 11, 15, 0.9);
+    background: #fff;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.mr-input:focus,
+.mr-textarea:focus {
+    outline: none;
+    border-color: rgba(230, 0, 18, 0.55);
+    box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.12);
+}
+
+.mr-textarea {
+    resize: vertical;
+}
+
+/* checks */
+.mr-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-size: 13px;
+    color: rgba(11, 11, 15, 0.68);
+    line-height: 1.5;
+}
+
+.mr-check input {
+    margin-top: 2px;
+    accent-color: var(--red);
+}
+
+/* actions */
+.mr-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+@media (max-width: 520px) {
+    .mr-actions {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mr-note {
+    margin: 6px 0 0;
+    font-size: 12px;
+    color: rgba(11, 11, 15, 0.55);
+}
+
+/* =========================
+   BUTTONS (aislados para no chocar con .btn)
+========================= */
+.mr-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 14px;
+
+    border: 1px solid transparent;
+    text-decoration: none;
+
+    font-weight: 800;
+    cursor: pointer;
+
+    transition:
+        transform 0.12s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease;
+}
+
+.mr-btn:active {
+    transform: translateY(1px);
+}
+
+.mr-btn--wide {
+    width: 100%;
+}
+
+.mr-btn--primary {
+    background: var(--red);
+    color: #fff;
+    box-shadow: 0 16px 34px rgba(230, 0, 18, 0.18);
+}
+
+.mr-btn--primary:hover {
+    box-shadow: 0 18px 40px rgba(230, 0, 18, 0.24);
+}
+
+.mr-btn--ghost {
+    background: #fff;
+    border-color: rgba(17, 24, 39, 0.14);
+    color: rgba(11, 11, 15, 0.86);
+}
+
+.mr-btn--ghost:hover {
+    background: rgba(17, 24, 39, 0.03);
+}
+
+/* =========================
+   RIGHT PANELS (como referencia)
+========================= */
+.mr-contact__right {
+    display: grid;
+    gap: 14px;
+}
+
+.mr-panels {
+    display: grid;
+    gap: 14px;
+}
+
+@media (min-width: 980px) {
+    .mr-panels {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.mr-panel {
+    border: 1px solid rgba(17, 24, 39, 0.12);
+    border-radius: 18px;
+    background: #fff;
+    padding: 16px;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.05);
+}
+
+.mr-panel__title {
+    margin: 0 0 12px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(11, 11, 15, 0.62);
+}
+
+/* mini rows */
+.mr-mini {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+
+    padding: 10px 10px;
+    border-radius: 14px;
+
+    text-decoration: none;
+    color: inherit;
+
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    background: rgba(17, 24, 39, 0.02);
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.mr-mini:hover {
+    transform: translateY(-1px);
+    background: rgba(230, 0, 18, 0.04);
+    border-color: rgba(230, 0, 18, 0.14);
+}
+
+.mr-ico {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+
+    background: rgba(230, 0, 18, 0.08);
+    border: 1px solid rgba(230, 0, 18, 0.14);
+    color: rgba(11, 11, 15, 0.85);
+
+    font-weight: 900;
+    flex: 0 0 auto;
+}
+
+.mr-mini__label {
+    font-size: 12px;
+    font-weight: 900;
+    color: rgba(11, 11, 15, 0.7);
+    margin-bottom: 2px;
+}
+
+.mr-mini__value {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(11, 11, 15, 0.82);
+}
+
+/* puntos de atención */
+.mr-panel--list .mr-panel__title {
+    margin-bottom: 10px;
+}
+
+.mr-points {
+    display: grid;
+    gap: 10px;
+}
+
+.mr-point {
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    background: rgba(17, 24, 39, 0.02);
+}
+
+.mr-point__head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.mr-pin {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--red);
+    box-shadow: 0 10px 18px rgba(230, 0, 18, 0.2);
+    flex: 0 0 auto;
+}
+
+.mr-point__text {
+    margin: 0;
+    color: rgba(11, 11, 15, 0.68);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.mr-panel__actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* mobile spacing */
+@media (max-width: 720px) {
+    .mr-contact {
+        padding: 22px 0 44px;
+    }
+}

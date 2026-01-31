@@ -1,0 +1,223 @@
+/* =========================
+   SOPORTE - Mi Red Huancayo
+   Archivo: resources/css/soporte.css
+   Paleta: rojo / negro / blanco (fondo blanco)
+========================= */
+
+.support-page {
+    background: #fff;
+    color: #111827;
+}
+
+.support {
+    padding: 42px 0 64px;
+    background: #fff;
+}
+
+/* Header */
+.support__head {
+    margin-bottom: 22px;
+}
+
+.support__kicker {
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(17, 24, 39, 0.65);
+}
+
+.support__title {
+    margin: 0 0 10px;
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 950;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: #0f172a;
+}
+
+.support__subtitle {
+    margin: 0;
+    max-width: 72ch;
+    color: rgba(17, 24, 39, 0.72);
+    line-height: 1.6;
+}
+
+.support__cta {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.support__ctaGhost {
+    border-radius: 14px;
+}
+
+/* Grid */
+.support__grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 920px) {
+    .support__grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: start;
+    }
+}
+
+/* Card base (respeta tu .card si ya existe, lo refuerzo pro) */
+.support__card.card {
+    border-radius: 18px;
+    padding: 18px;
+    background: #fff;
+    border: 1px solid rgba(17, 24, 39, 0.1);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
+}
+
+.support__cardHead {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: baseline;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+    margin-bottom: 12px;
+}
+
+.support__cardTitle {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 950;
+    color: #111827;
+}
+
+.support__cardHint {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(17, 24, 39, 0.6);
+}
+
+/* FAQ */
+.faq {
+    display: grid;
+    gap: 10px;
+}
+
+.faq__item {
+    border-radius: 14px;
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    background: rgba(17, 24, 39, 0.02);
+    overflow: hidden;
+}
+
+.faq__q {
+    cursor: pointer;
+    list-style: none;
+    padding: 14px 14px;
+    font-weight: 950;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.faq__q::-webkit-details-marker {
+    display: none;
+}
+
+.faq__q::after {
+    content: "+";
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    color: #111827;
+    background: #fff;
+    border: 1px solid rgba(17, 24, 39, 0.1);
+    flex: 0 0 auto;
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.faq__item[open] .faq__q::after {
+    content: "—";
+    background: rgba(230, 0, 18, 0.1);
+    border-color: rgba(230, 0, 18, 0.18);
+}
+
+.faq__a {
+    padding: 0 14px 14px;
+    color: rgba(17, 24, 39, 0.74);
+    line-height: 1.55;
+}
+
+/* Steps */
+.steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.steps__item {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+    align-items: start;
+
+    padding: 12px 12px;
+    border-radius: 14px;
+    background: rgba(17, 24, 39, 0.02);
+    border: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.steps__num {
+    width: 38px;
+    height: 38px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-weight: 1000;
+    color: #fff;
+    background: linear-gradient(135deg, var(--red), #b8000e);
+    box-shadow: 0 12px 26px rgba(230, 0, 18, 0.16);
+}
+
+.steps__title {
+    margin: 0;
+    font-weight: 950;
+    color: #111827;
+}
+
+.steps__text {
+    margin: 4px 0 0;
+    color: rgba(17, 24, 39, 0.72);
+    line-height: 1.5;
+}
+
+/* Mini CTA */
+.support__miniCta {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-top: 12px;
+    border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.support__miniNote {
+    font-size: 13px;
+    color: rgba(17, 24, 39, 0.58);
+}

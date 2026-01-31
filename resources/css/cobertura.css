@@ -1,0 +1,118 @@
+/* =========================
+   COBERTURA - Mi Red Huancayo
+   Archivo: resources/css/cobertura.css
+   Paleta: rojo / negro / blanco
+========================= */
+
+.coverage-page {
+    background: #fff;
+    color: #111827;
+}
+
+/* Sección principal */
+.coverage {
+    padding: 56px 0;
+    background: #fff;
+}
+
+/* Encabezado */
+.coverage__title {
+    margin: 0 0 10px;
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 950;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: #0f172a;
+}
+
+.coverage__subtitle {
+    margin: 0;
+    max-width: 70ch;
+    color: rgba(17, 24, 39, 0.72);
+    line-height: 1.6;
+}
+
+/* Card (usa tu .card global, pero lo refuerzo pro) */
+.coverage .card {
+    margin-top: 24px;
+    border-radius: 18px;
+    padding: 18px;
+    background: #fff;
+    border: 1px solid rgba(17, 24, 39, 0.1);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* Título dentro de card */
+.coverage .card h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    font-weight: 950;
+    color: #111827;
+    letter-spacing: -0.01em;
+}
+
+/* Lista de zonas */
+.coverage__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    color: rgba(17, 24, 39, 0.72);
+}
+
+.coverage__list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(17, 24, 39, 0.03);
+    border: 1px solid rgba(17, 24, 39, 0.06);
+}
+
+/* CTA Wrapper */
+.coverage__cta {
+    margin-top: 22px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Botón WhatsApp - si tu .btn-primary ya existe, no lo rompo.
+   Solo doy un look consistente cuando esté dentro de coverage. */
+.coverage .btn.btn-primary {
+    border-radius: 14px;
+    height: 46px;
+    padding: 0 18px;
+    font-weight: 950;
+    letter-spacing: 0.01em;
+    box-shadow: 0 14px 30px rgba(230, 0, 18, 0.18);
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.coverage .btn.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 38px rgba(230, 0, 18, 0.26);
+}
+
+/* Nota / info opcional */
+.coverage__note {
+    margin: 12px 0 0;
+    color: rgba(17, 24, 39, 0.55);
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    .coverage .card {
+        padding: 16px;
+    }
+
+    .coverage__list li {
+        padding: 10px 10px;
+    }
+}
